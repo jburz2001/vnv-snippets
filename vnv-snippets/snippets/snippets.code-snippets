@@ -1,7 +1,7 @@
 {
-    "vnv-cppFile": {
+    "CppFile": {
         "scope": "cpp",
-        "prefix": "[vnv-cppFile]",
+        "prefix": "vnv-cpp",
         "body": [
             "using namespace VnV;",
             "",
@@ -57,10 +57,11 @@
             "  ",
             "  return 0;",
             "}",
+            "",
         ],
         "description": "Inserts a template to create a cpp file that incorporates VnV macros."
     },
-    "vnv-test" : {
+    "INJECTION_TEST" : {
         "scope": "cpp",
         "prefix": ["vnv-test"],
         "body": [
@@ -84,7 +85,7 @@
         ],
         "description": "Inserts a VnV INJECTION_TEST."
     },
-    "vnv-exe" : {
+    "INJECTION_EXECUTABLE" : {
         "scope": "cpp",
         "prefix": ["vnv-exe"],
         "body": [
@@ -98,7 +99,7 @@
         ],
         "description": "Inserts a VnV INJECTION_TEST."
     },
-    "vnv-options": {
+    "INJECTION_OPTIONS": {
         "scope": "cpp",
         "prefix": ["vnv-options"],
         "body": [
@@ -115,16 +116,16 @@
         ],
         "description": "Inserts a VnV INJECTION_OPTIONS."
     }, 
-    "vnv-initialize": {
+    "INJECTION_INITIALIZE": {
         "scope": "cpp",
         "prefix": ["vnv-init"],
         "body": [
-                "INJECTION_INITIALIZE(${3:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${1:inputfiles/${4:testName}}.json\";",
+                "INJECTION_INITIALIZE(${1:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:pathToInputJson}\";",
                 "",
             ],
         "description": "Inserts a VnV INJECTION_INITIALIZE."
     },
-    "vnv-injectionPoint": {
+    "INJECTION_POINT": {
         "scope": "cpp",
         "prefix": ["vnv-inject"],
         "body": [
@@ -133,7 +134,7 @@
             ],
         "description": "Inserts a VnV INJECTION_POINT."  
     },
-    "vnv-finalize": {
+    "INJECTION_FINALIZE": {
         "scope": "cpp",
         "prefix": ["vnv-fin"],
         "body": [
