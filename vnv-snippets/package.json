@@ -1,0 +1,20 @@
+{
+    "name": "vnv-snippets",
+    "displayName": "vnv-snippets",
+    "description": "Snippets for VnV software macros.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "cpp",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
