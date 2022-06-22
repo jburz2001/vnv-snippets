@@ -1,6 +1,7 @@
 {
     "name": "vnv-snippets",
     "displayName": "vnv-snippets",
+    "publisher": "jburz2001",
     "description": "Snippets for VnV software macros.",
     "version": "0.0.1",
     "engines": {
