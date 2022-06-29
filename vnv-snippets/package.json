@@ -2,6 +2,7 @@
     "name": "vnv-snippets",
     "displayName": "vnv-snippets",
     "publisher": "jburz2001",
+    "repository": "https://github.com/jburz2001/vnv-vscode-extension",
     "description": "Snippets for VnV software macros.",
     "version": "0.0.1",
     "engines": {
@@ -17,5 +18,6 @@
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
-    }
+    },
+    "license": "MIT"
 }
