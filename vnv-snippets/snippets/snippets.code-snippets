@@ -120,7 +120,7 @@
         "scope": "cpp",
         "prefix": ["vnv-init"],
         "body": [
-                "INJECTION_INITIALIZE(${1:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:pathToInputJson}.json\";",
+                "INJECTION_INITIALIZE(${1:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:pathToInputJson}.json\";)",
                 "",
             ],
         "description": "Inserts a VnV INJECTION_INITIALIZE."
