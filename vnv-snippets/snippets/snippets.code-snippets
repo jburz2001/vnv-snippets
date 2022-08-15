@@ -61,30 +61,6 @@
         ],
         "description": "Inserts a template to create a cpp file that incorporates VnV macros."
     },
-    "INJECTION_TEST" : {
-        "scope": "cpp",
-        "prefix": ["vnv-test"],
-        "body": [
-            "/**",
-            "  * @title ${1:ReportTestTitle}",
-            "  *",
-            "  * ${2:Description of this test in a VnV report.}",
-            "  *",
-            "  **/",
-            "INJECTION_TEST(${3:TestSuite}, ${4:testName}) {",
-            "  ",
-            "  auto ... = GetRef_NoCheck(\"...\", ...);",
-            "  ",
-            "  engine->Put(\"...\",...);",
-            "  ",
-            "  VnV_Debug(${3:TestSuite}, \"GEEEERER %s\", \"sdfsdf\");",
-            "  ",
-            "  return SUCCESS;",
-            "}",
-            "",
-        ],
-        "description": "Inserts a VnV INJECTION_TEST."
-    },
     "INJECTION_EXECUTABLE" : {
         "scope": "cpp",
         "prefix": ["vnv-exe"],
@@ -98,6 +74,24 @@
             "",
         ],
         "description": "Inserts a VnV INJECTION_TEST."
+    },
+    "INJECTION_FINALIZE": {
+      "scope": "cpp",
+      "prefix": ["vnv-fin"],
+      "body": [
+              "INJECTION_FINALIZE(SPNAME);",
+              "",
+          ],
+      "description": "Inserts a VnV INJECTION_FINALIZE."
+    },
+    "INJECTION_INITIALIZE": {
+      "scope": "cpp",
+      "prefix": ["vnv-init"],
+      "body": [
+              "INJECTION_INITIALIZE(${1:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:pathToInputJson}.json\";)",
+              "",
+          ],
+      "description": "Inserts a VnV INJECTION_INITIALIZE."
     },
     "INJECTION_OPTIONS": {
         "scope": "cpp",
@@ -116,15 +110,6 @@
         ],
         "description": "Inserts a VnV INJECTION_OPTIONS."
     }, 
-    "INJECTION_INITIALIZE": {
-        "scope": "cpp",
-        "prefix": ["vnv-init"],
-        "body": [
-                "INJECTION_INITIALIZE(${1:TestSuite}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:pathToInputJson}.json\";)",
-                "",
-            ],
-        "description": "Inserts a VnV INJECTION_INITIALIZE."
-    },
     "INJECTION_POINT": {
         "scope": "cpp",
         "prefix": ["vnv-inject"],
@@ -134,13 +119,28 @@
             ],
         "description": "Inserts a VnV INJECTION_POINT."  
     },
-    "INJECTION_FINALIZE": {
-        "scope": "cpp",
-        "prefix": ["vnv-fin"],
-        "body": [
-                "INJECTION_FINALIZE(SPNAME);",
-                "",
-            ],
-        "description": "Inserts a VnV INJECTION_FINALIZE."
-    },
+    "INJECTION_TEST" : {
+      "scope": "cpp",
+      "prefix": ["vnv-test"],
+      "body": [
+          "/**",
+          "  * @title ${1:ReportTestTitle}",
+          "  *",
+          "  * ${2:Description of this test in a VnV report.}",
+          "  *",
+          "  **/",
+          "INJECTION_TEST(${3:TestSuite}, ${4:testName}) {",
+          "  ",
+          "  auto ... = GetRef_NoCheck(\"...\", ...);",
+          "  ",
+          "  engine->Put(\"...\",...);",
+          "  ",
+          "  VnV_Debug(${3:TestSuite}, \"GEEEERER %s\", \"sdfsdf\");",
+          "  ",
+          "  return SUCCESS;",
+          "}",
+          "",
+      ],
+      "description": "Inserts a VnV INJECTION_TEST."
+  }
 }
