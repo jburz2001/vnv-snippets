@@ -110,7 +110,7 @@
     },
     "INJECTION_LOOP_BEGIN_C": {
       "scope": "cpp",
-      "prefix": ["vnv-loop-begin"],
+      "prefix": ["vnv-loop-begin-c"],
       "body": [
               "/**",
               "  * @title ${1:title}",
@@ -224,7 +224,7 @@
         "body": [
             "/**",
             "  * @title ${1:title}",
-            "  *",
+            "  *",  
             "  * ${2:description}",
             "  *",
             "  **/",
