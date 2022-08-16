@@ -93,6 +93,119 @@
           ],
       "description": "VnV INJECTION_INITIALIZE."
     },
+    "INJECTION_LOOP_BEGIN": {
+      "scope": "cpp",
+      "prefix": ["vnv-loop-begin"],
+      "body": [
+              "INJECTION_LOOP_BEGIN(${1:PNAME}, ${2:COMM}, ${3:NAME}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_LOOP_BEGIN."
+    },
+    "INJECTION_LOOP_BEGIN_C": {
+      "scope": "cpp",
+      "prefix": ["vnv-loop-begin"],
+      "body": [
+              "INJECTION_LOOP_BEGIN_C(${1:PNAME}, ${2:COMM}, ${3:NAME}, ${4:callback} {",
+              "  if (type == VnV::InjectionPointType::Begin) {",
+              "    //engine->Put(\"...\", ...);",
+              "  }",
+              "  else if (type == VnV::InjectionPointType::Iter) {",
+              "    //engine->Put(\"...\", ...);",
+              "  }",
+              "  ",
+              "  ",
+              "  ",
+              "}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_LOOP_BEGIN with callback."
+    },
+    "INJECTION_LOOP_END": {
+      "scope": "cpp",
+      "prefix": ["vnv-loop-end"],
+      "body": [
+              "INJECTION_LOOP_END(${1:PNAME}, ${2:NAME});",
+              "",
+          ],
+      "description": "VnV INJECTION_LOOP_END."
+    },
+    "INJECTION_LOOP_ITER": {
+      "scope": "cpp",
+      "prefix": ["vnv-iter"],
+      "body": [
+              "INJECTION_LOOP_ITER(${1:PNAME}, ${2:NAME}, ${3:STAGE});",
+              "",
+          ],
+      "description": "VnV INJECTION_LOOP_ITER."
+    },
+    "INJECTION_LOOP_ITER_D": {
+      "scope": "cpp",
+      "prefix": ["vnv-iter-d"],
+      "body": [
+              "INJECTION_LOOP_ITER_D(${1:PNAME}, ${2:NAME}, ${3:STAGE});",
+              "",
+          ],
+      "description": "VnV INJECTION_LOOP_ITER_D."
+    },
+    "INJECTION_LOOP": {
+      "scope": "cpp",
+      "prefix": ["vnv-loop"],
+      "body": [
+          "/**",
+          "  * ${1:title}",
+          "  *",
+          "  * ${2:description}",
+          "  *",
+          "  **/",
+          "INJECTION_LOOP_BEGIN(${3:PNAME}, ${4:COMM}, ${5:NAME}, ...);",
+          "",
+          "//begin loop here",
+          "",
+          "//can also use INJECTION_LOOP_ITER_D",
+          "INJECTION_LOOP_ITER(${3:PNAME}, ${5:NAME}, ${7:STAGE});",
+          "",
+          "//end loop here",
+          "",
+          "INJECTION_LOOP_END(${3:PNAME}, ${5:NAME});",
+          "",
+      ],
+      "description": "VnV INJECTION_LOOP."
+    },
+    "INJECTION_LOOP_C": {
+      "scope": "cpp",
+      "prefix": ["vnv-loop-c"],
+      "body": [
+          "/**",
+          "  * ${1:title}",
+          "  *",
+          "  * ${2:description}",
+          "  *",
+          "  **/",
+          "INJECTION_LOOP_BEGIN_C(${3:PNAME}, ${4:COMM}, ${5:NAME}, ${6:callback} {",
+          "  if (type == VnV::InjectionPointType::Begin) {",
+          "    //engine->Put(\"...\", ...);",
+          "  }",
+          "  else if (type == VnV::InjectionPointType::Iter) {",
+          "    //engine->Put(\"...\", ...);",
+          "  }",
+          "  ",
+          "  ",
+          "  ",
+          "}, ...);",
+          "",
+          "//begin loop here",
+          "",
+          "//can also use INJECTION_LOOP_ITER_D",
+          "INJECTION_LOOP_ITER(${3:PNAME}, ${5:NAME}, ${7:STAGE});",
+          "",
+          "//end loop here",
+          "",
+          "INJECTION_LOOP_END(${3:PNAME}, ${5:NAME});",
+          "",
+      ],
+      "description": "VnV INJECTION_LOOP with callback."
+    },
     "INJECTION_OPTIONS": {
         "scope": "cpp",
         "prefix": ["vnv-options"],
