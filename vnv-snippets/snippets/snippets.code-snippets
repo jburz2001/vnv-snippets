@@ -228,7 +228,7 @@
             "  * ${2:description}",
             "  *",
             "  **/",
-            "INJECTION_OPTIONS(${3:PNAME}, ${4:schema}, ${5:OptionsObject})",
+            "INJECTION_OPTIONS(${3:PNAME}, ${4:schema}, ${5:OptionsObject}) {",
             "  return NULL;",
             "}",
             "",
