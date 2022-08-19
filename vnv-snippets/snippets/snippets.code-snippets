@@ -315,11 +315,20 @@
     },
     "Register_Injection_Point" : {
       "scope": "cpp",
-      "prefix": ["vnv-reg"],
+      "prefix": ["vnv-reg-point"],
       "body": [
           "Register_Injection_Point(${1:PNAME}, ${2:NAME}, ${3:PARAMETERS});",
           "",
       ],
       "description": "VnV Register_Injection_Point."
-    }
+    },
+    "Register_Injection_Iterator" : {
+      "scope": "cpp",
+      "prefix": ["vnv-reg-iter"],
+      "body": [
+          "Register_Injection_Iterator(${1:PNAME}, ${2:NAME}, ${3:PARAMETERS});",
+          "",
+      ],
+      "description": "VnV Register_Injection_Iterator."
+    },
 }
