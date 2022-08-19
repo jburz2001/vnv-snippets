@@ -2,11 +2,32 @@
 
 All notable changes to the "vnv-snippets" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+<!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
 ## [Unreleased]
 
-- snippets for the rest of the VnV macros
+- TBD 
+
+## [1.0.0] - 2022-08-19
+### Added
+The rest of the snippets!
+
+- New snippets:
+    - vnv-inject-c for INJECTION\_POINT\_C
+    - vnv-func for INJECTION\_FUNCTION\_WRAPPER
+    - vnv-func-c for INJECTION\_FUNCTION\_WRAPPER\_C
+    - vnv-reg-point for Register\_Injection\_Point
+    - vnv-iter for INJECTION\_ITERATION
+    - vnv-iter-c for INJECTION\_ITERATION\_C
+    - vnv-reg-iterator for Register\_Injection\_Iterator
+    - vnv-func-plug for INJECTION\_FUNCTION\_PLUG
+    - vnv-func-plug-c for INJECTION\_FUNCTION\_PLUG\_C
+    - vnv-reg-plug for Register\_Injection\_Plug
+
+### Changed
+- vnv-iter for INJECTION\_LOOP\_ITER changed to vnv-loop-iter
+  - disambiguates the relation between INJECTION\_ITERATION and INJECTION\_LOOP\_ITER
+  - same done for vnv-iter-d
 
 ## [0.0.2] - 2022-08-16
 ### Added
