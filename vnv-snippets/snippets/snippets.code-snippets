@@ -84,6 +84,24 @@
           ],
       "description": "VnV INJECTION_FINALIZE."
     },
+    "INJECTION_FUNCTION_WRAPPER": {
+      "scope": "cpp",
+      "prefix": ["vnv-func"],
+      "body": [
+              "INJECTION_FUNCTION_WRAPPER(${1:PNAME}, ${2:COMM}, ${3:NAME}, ${4:function}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_FINALIZE."
+    },
+    "INJECTION_FUNCTION_WRAPPER_C": {
+      "scope": "cpp",
+      "prefix": ["vnv-func-c"],
+      "body": [
+              "INJECTION_FUNCTION_WRAPPER_C(${1:PNAME}, ${2:COMM}, ${3:NAME}, ${4:function}, ${5:callback}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_FINALIZE."
+    },
     "INJECTION_INITIALIZE": {
       "scope": "cpp",
       "prefix": ["vnv-init"],
