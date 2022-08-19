@@ -324,7 +324,7 @@
     },
     "Register_Injection_Iterator" : {
       "scope": "cpp",
-      "prefix": ["vnv-reg-iter"],
+      "prefix": ["vnv-reg-iterator"],
       "body": [
           "Register_Injection_Iterator(${1:PNAME}, ${2:NAME}, ${3:PARAMETERS});",
           "",
