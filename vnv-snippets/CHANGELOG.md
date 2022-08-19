@@ -8,6 +8,11 @@ All notable changes to the "vnv-snippets" extension will be documented in this f
 
 - TBD 
 
+## [1.0.1] - 2022-08-19
+
+### Changed
+Updated README for extension. It now refers to the Changelog for Release Notes, among other small changes.
+
 ## [1.0.0] - 2022-08-19
 ### Added
 The rest of the snippets!
