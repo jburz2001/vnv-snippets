@@ -84,6 +84,24 @@
           ],
       "description": "VnV INJECTION_FINALIZE."
     },
+    "INJECTION_FUNCTION_PLUG": {
+      "scope": "cpp",
+      "prefix": ["vnv-func-plug"],
+      "body": [
+              "INJECTION_FUNCTION_PLUG(${1:VAR}, ${2:PNAME}, ${3:COMM}, ${4:NAME}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_FUNCTION_PLUG."
+    },
+    "INJECTION_FUNCTION_PLUG_C": {
+      "scope": "cpp",
+      "prefix": ["vnv-func-plug-c"],
+      "body": [
+              "INJECTION_FUNCTION_PLUG_C(${1:VAR}, ${2:PNAME}, ${3:COMM}, ${4:NAME}, ${5:callback}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_FUNCTION_PLUG with callback."
+    },
     "INJECTION_FUNCTION_WRAPPER": {
       "scope": "cpp",
       "prefix": ["vnv-func"],
