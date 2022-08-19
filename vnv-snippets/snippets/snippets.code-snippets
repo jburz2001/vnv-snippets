@@ -349,4 +349,13 @@
       ],
       "description": "VnV Register_Injection_Iterator."
     },
+    "Register_Injection_Plug" : {
+      "scope": "cpp",
+      "prefix": ["vnv-reg-plug"],
+      "body": [
+          "Register_Injection_Plug(${1:PNAME}, ${2:NAME}, ${3:PARAMETERS});",
+          "",
+      ],
+      "description": "VnV Register_Injection_Plug."
+    },
 }
