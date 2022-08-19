@@ -244,6 +244,15 @@
             ],
         "description": "VnV INJECTION_POINT."  
     },
+    "INJECTION_POINT_C": {
+        "scope": "cpp",
+        "prefix": ["vnv-inject-c"],
+        "body": [
+                "INJECTION_POINT(${1:PNAME}, ${2:COMM}, ${3:NAME}, ${4:callback}, ${5:...});",
+                "",
+            ],
+        "description": "VnV INJECTION_POINT with callback."  
+    },
     "INJECTION_TEST" : {
       "scope": "cpp",
       "prefix": ["vnv-test"],
