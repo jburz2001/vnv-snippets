@@ -294,5 +294,14 @@
           "",
       ],
       "description": "VnV INJECTION_TEST."
-  }
+    },
+    "Register_Injection_Point" : {
+      "scope": "cpp",
+      "prefix": ["vnv-reg"],
+      "body": [
+          "Register_Injection_Point(${1:PNAME}, ${2:NAME}, ${3:PARAMETERS});",
+          "",
+      ],
+      "description": "VnV Register_Injection_Point."
+    }
 }
