@@ -106,10 +106,28 @@
       "scope": "cpp",
       "prefix": ["vnv-init"],
       "body": [
-              "INJECTION_INITIALIZE(${1:PNAME}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:filename}.json\";)",
+              "INJECTION_INITIALIZE(${1:PNAME}, &argc, &argv, (argc == 2) ? argv[1] : \"./${2:filename}.json\");",
               "",
           ],
       "description": "VnV INJECTION_INITIALIZE."
+    },
+    "INJECTION_ITERATION": {
+      "scope": "cpp",
+      "prefix": ["vnv-iter"],
+      "body": [
+              "INJECTION_ITERATION(${1:VAR}, ${2:PNAME}, ${3:COMM}, ${4:NAME}, ${5:ONCE}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_ITERATION."
+    },
+    "INJECTION_ITERATION_C": {
+      "scope": "cpp",
+      "prefix": ["vnv-iter-c"],
+      "body": [
+              "INJECTION_ITERATION_C(${1:VAR}, ${2:PNAME}, ${3:COMM}, ${4:NAME}, ${5:ONCE}, ${6:callback}, ...);",
+              "",
+          ],
+      "description": "VnV INJECTION_ITERATION with callback."
     },
     "INJECTION_LOOP_BEGIN": {
       "scope": "cpp",
@@ -162,7 +180,7 @@
     },
     "INJECTION_LOOP_ITER": {
       "scope": "cpp",
-      "prefix": ["vnv-iter"],
+      "prefix": ["vnv-loop-iter"],
       "body": [
               "INJECTION_LOOP_ITER(${1:PNAME}, ${2:NAME}, ${3:STAGE});",
               "",
@@ -171,7 +189,7 @@
     },
     "INJECTION_LOOP_ITER_D": {
       "scope": "cpp",
-      "prefix": ["vnv-iter-d"],
+      "prefix": ["vnv-loop-iter-d"],
       "body": [
               "INJECTION_LOOP_ITER_D(${1:PNAME}, ${2:NAME}, ${3:STAGE});",
               "",
